@@ -6,7 +6,8 @@ describe Array do
 	
 		it 'should sum numbers' do
 			expect([1,2,3,4].inject{ |memo, n| memo + n }).to eq(10)
-			expect([1,2,3,4].my_inject{ |memo, n| memo +n }).to eq(10)
+			expect([1,2,3,4].my_inject{ |memo, n| memo + n }).to eq(10)
+			expect([1,2,3,4,5].my_inject{ |memo, n| memo + n }).to eq(15)
 		end
 
 		it 'should subtract numbers' do
