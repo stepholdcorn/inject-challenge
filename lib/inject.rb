@@ -4,12 +4,10 @@ class Array
 		block.call(self)
 		memo = self.shift 
 		(self.count).times do
-		n = self.shift 
-		memo = memo + n 
+			n = self.shift 
+			memo = block.call(memo, n) 
 		end
-		return memo
+		memo
 	end
 
 end
-
-
