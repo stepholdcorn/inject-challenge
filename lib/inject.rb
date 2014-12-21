@@ -1,11 +1,14 @@
 class Array
 
-	def my_inject(&block)
-		block.call(self)
+	def my_inject(*parameter)
 		memo = self.shift 
 		(self.count).times do
 			n = self.shift 
-			memo = block.call(memo, n) 
+			if parameter[0].is_a? Symbol
+			   memo = memo.send(parameter[0], n) 
+			else
+			   memo = yield(memo, n) 
+			end
 		end
 		memo
 	end

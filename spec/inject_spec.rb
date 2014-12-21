@@ -21,4 +21,13 @@ describe Array do
 
 	end
 
+	context 'with a symbol' do
+
+		it 'should sum numbers' do
+			expect([1,2,3,4].inject(:+)).to eq(10)
+			expect([1,2,3,4].my_inject(:+)).to eq(10)
+		end
+	
+	end
+
 end
