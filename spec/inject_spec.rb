@@ -47,18 +47,16 @@ describe Array do
 			expect([1,2,3,4].my_inject(2, :+)).to eq(12)
 		end
 
+		it 'should subtract numbers' do
+			expect([1,2,3,4].inject(2, :-)).to eq(-8)
+			expect([1,2,3,4].my_inject(2, :-)).to eq(-8)
+		end
+
+		it 'should multiply numbers' do
+			expect([1,2,3,4].inject(2, :*)).to eq(48)
+			expect([1,2,3,4].my_inject(2, :*)).to eq(48)
+		end
+
 	end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
