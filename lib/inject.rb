@@ -4,16 +4,14 @@ class Array
 		copy = self.dup
 		if parameter[0].is_a? Integer
 		   memo = parameter[0]
-		   (copy.count).times do
-		    	n = copy.shift 
-				(parameter[1].is_a? Symbol) ? memo = memo.send(parameter[1], n) : memo = yield(memo, n) 
-			end
+		   index = 1		   
 		else
-			memo = copy.shift  
-			(copy.count).times do
-				n = copy.shift 
-				(parameter[0].is_a? Symbol) ? memo = memo.send(parameter[0], n) : memo = yield(memo, n)
-			end
+			memo = copy.shift 
+			index = 0
+		end 
+		(copy.count).times do
+		    n = copy.shift 
+			(parameter[index].is_a? Symbol) ? memo = memo.send(parameter[index], n) : memo = yield(memo, n) 
 		end
 		memo
 	end
