@@ -1,0 +1,28 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/stephanieoldcorn/Makers/Ruby/inject_challenge/lib/inject.rb": [
+        1,
+        null,
+        1,
+        12,
+        12,
+        6,
+        6,
+        null,
+        6,
+        6,
+        null,
+        12,
+        42,
+        42,
+        null,
+        12,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1425915570
+  }
+}
